@@ -25,18 +25,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        cache-dependency-path: |
-          backend/package-lock.json
-          frontend/package-lock.json
 
     - name: Install backend dependencies
       working-directory: ./backend
-      run: npm ci
+      run: npm install
 
     - name: Install frontend dependencies
       working-directory: ./frontend
-      run: npm ci
+      run: npm install
 
     - name: Lint backend code
       working-directory: ./backend
@@ -61,18 +57,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        cache-dependency-path: |
-          backend/package-lock.json
-          frontend/package-lock.json
 
     - name: Install backend dependencies
       working-directory: ./backend
-      run: npm ci
+      run: npm install
 
     - name: Install frontend dependencies
       working-directory: ./frontend
-      run: npm ci
+      run: npm install
 
     - name: Run npm audit (backend)
       working-directory: ./backend
@@ -113,18 +105,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        cache-dependency-path: |
-          backend/package-lock.json
-          frontend/package-lock.json
 
     - name: Install backend dependencies
       working-directory: ./backend
-      run: npm ci
+      run: npm install
 
     - name: Install frontend dependencies
       working-directory: ./frontend
-      run: npm ci
+      run: npm install
 
     - name: Run backend tests
       working-directory: ./backend
