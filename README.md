@@ -13,7 +13,7 @@ A production-ready hotel booking application built with MongoDB, Express, React,
 - **Cloud-Native**: Kubernetes orchestration on AWS EKS
 - **Infrastructure as Code**: Pulumi for reproducible infrastructure
 
-## 🏗️ Architecture
+## 🏗️ Architecture 
 
 - **Frontend**: React 18 + Material-UI + Axios
 - **Backend**: Node.js + Express.js + JWT
