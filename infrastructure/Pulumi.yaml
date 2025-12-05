@@ -1,0 +1,3 @@
+name: hotel-booking-infrastructure
+runtime: nodejs
+description: Hotel Booking System Infrastructure on AWS EKS

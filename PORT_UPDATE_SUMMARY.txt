@@ -1,0 +1,81 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    PORTS UPDATED TO AVOID CONFLICTS                          ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ PORT CHANGES COMPLETE
+
+📦 LOCAL DEVELOPMENT PORTS:
+
+Before:
+  Frontend:  http://localhost:3000
+  Backend:   http://localhost:5000
+  MongoDB:   localhost:27017
+
+After:
+  Frontend:  http://localhost:3001  ✓
+  Backend:   http://localhost:5002  ✓
+  MongoDB:   localhost:27018         ✓
+
+🎯 WHY THE CHANGE:
+
+  ✓ Ports 3000 and 5000 commonly used by other apps
+  ✓ Avoids conflicts with existing services
+  ✓ Allows running multiple projects simultaneously
+  ✓ No changes needed for Kubernetes deployment
+
+📝 UPDATED FILES:
+
+  ✓ docker-compose.yml
+  ✓ frontend/.env.example
+  ✓ frontend/src/api/axios.js
+  ✓ config.env.example
+  ✓ README.md
+  ✓ GET_STARTED.md
+  ✓ DEPLOYMENT.md
+  ✓ DEPLOYMENT_CHECKLIST.md
+  ✓ SETUP_GUIDE.md
+  ✓ TESTING.md
+  ✓ QUICKSTART.md
+  ✓ FINAL_SUMMARY.txt
+
+📚 NEW DOCUMENTATION:
+
+  → PORT_CONFIGURATION.md  Complete port guide
+
+🚀 QUICK START:
+
+  # Start services
+  docker-compose up --build
+
+  # Access application
+  Frontend:  http://localhost:3001
+  Backend:   http://localhost:5002/api
+
+  # Test backend
+  curl http://localhost:5002/health
+
+  # Test API
+  curl http://localhost:5002/api/hotels
+
+🔧 KUBERNETES (UNCHANGED):
+
+  Frontend:  Port 80 (via LoadBalancer)
+  Backend:   Port 5000 (ClusterIP)
+  MongoDB:   Port 27017 (ClusterIP)
+
+  No changes needed for Kubernetes deployment!
+
+💡 PORT FORWARDING:
+
+  # Forward backend from Kubernetes
+  kubectl port-forward svc/backend 5002:5000 -n hotel-booking
+
+  # Forward frontend from Kubernetes
+  kubectl port-forward svc/frontend 3001:80 -n hotel-booking
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    ✅ PORTS CONFIGURED - NO CONFLICTS! 🚀                   ║
+║                                                                              ║
+║              Frontend: http://localhost:3001                                ║
+║              Backend:  http://localhost:5002                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
