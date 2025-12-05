@@ -1,12 +1,49 @@
+# Dependencies
 node_modules/
+package-lock.json
+
+# Environment variables
 .env
 .env.local
+.env.*.local
+
+# Build outputs
 dist/
 build/
 *.log
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Testing
 coverage/
+.nyc_output/
+
+# Pulumi
 .pulumi/
 Pulumi.*.yaml
+!Pulumi.yaml
+
+# Kubernetes configs (may contain sensitive data)
 kubeconfig-*.json
 cluster-details.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# AWS credentials (if accidentally committed)
+.aws/
+aws-credentials
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
