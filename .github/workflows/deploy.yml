@@ -12,6 +12,11 @@ env:
   CLUSTER_NAME: eks-cluster-pulumi-eksCluster-2d281b0
   NODE_VERSION: '18'
 
+permissions:
+  contents: read
+  security-events: write
+
+
 jobs:
   # Lint and Code Quality
   lint:
